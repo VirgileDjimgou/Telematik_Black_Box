@@ -1,0 +1,155 @@
+-----------------------------------------------------
+|  	Created by: Christian Ngameni W. and			|
+				Patrick Djimgou Virgile				|
+|	Created on: 09.07.2015							|
+|	File Version: 2.0								|
+|  	TITLE:	PARAMETERS FORMAT DEFINITION			|
+|	DESCRIPTION:									|
+|		Format specification for the sensors data	|
+|		read on the remote black box with the		|
+|		purpose of as less as possible traffic and	|
+|		data protection								|
+-----------------------------------------------------
+
+Prototype CLIENT-SERVER APPLICATION
+Port definition:
+
+Source | INPUT PORT | OUTPUT PORT |
+-----------------------------------
+GPS			3001		3002
+IMU			4001		4002
+OBD			5001		5002
+
+GPS 
+Frame FormatTypes : 
+-------------------
+V1_DOLLAR_ID_HASH_KEY_VALUE : 0x00  : "ID#Key0=Value0&Key1=Value1&Key3=Value3&Key2=&Key5=Value5" (here Key2 does not have any value)
+
+Remarks:		
+		1) The order of appearance of each key-value pair is not important. 
+		2) For keys with empty values please write it as it follows "key="
+		3) The Separator character is the colon mark ':'
+		4) Nothing after the last key value pair
+
+			
+Sensor | Group ID
+------------------
+IMU			0x00
+OBD2		0x01
+GPS			0x02
+CAM			0x03
+
+
+Group ID 			| 	Parameter Code (Key) | 	Parameter Name 				| 	Data Type  		|  	SI-Unit		|  	Factor  	|  	Default  	|  	Min   		| 	Max    		| Down-Threshold  |  Up-Threshold
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+IMU		:	0x00		0x00					PITCH 							double				degrees				1.0				 0.0		-180.0		   180.0				-90.0			90.0
+						0x01					ROLL 							double				degrees             1.0              0.0        -180.0         180.0				-90.0			90.0 
+						0x02					YAW 							double				degrees				1.0				 0.0        -180.0         180.0				-90.0			90.0                                                       
+						0x03					TEMPERATURE						double				celcius             1.0              0.0        -9999.0        9999.0               -10.0           10.0                                  
+						0x04					PRESSURE						double				bar                 1.0              0.0		 0.0		   9999.0				 0.0            0.0                                                                  
+						0x05					ALTITUDE						double				km               	1.0              0.0 		 0.0		   9999.0				 0.0		    0.0
+						0x06					X-ACCELEROMETER					double				km               	1.0              0.0 		 0.0		   9999.0				 0.0		    0.0                                  
+						0x07					Y-ACCELEROMETER					double				km               	1.0              0.0 		 0.0		   9999.0				 0.0		    0.0                                        
+						0x08					Z-ACCELEROMETER					double				km               	1.0              0.0 		 0.0		   9999.0				 0.0		    0.0
+						0x09					X-GYROSCOPE						double				km               	1.0              0.0 		 0.0		   9999.0				 0.0		    0.0                                        
+						0x0A					Y-GYROSCOPE						double				km               	1.0              0.0 		 0.0		   9999.0				 0.0		    0.0                                             
+						0x0B					Z-GYROSCOPE						double				km               	1.0              0.0 		 0.0		   9999.0				 0.0		    0.0
+						
+						0xFF					MESSAGE							string				no unit				-				""
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OBD2	:	0x01		0x00					SPEED							double				kph                 1.0              0.0		 0.0			
+						0x01					RPM								double				tr/s                1.0              0.0
+						0x02					THROTTLE_POSITION				double				percent(%)          1.0              0.0
+						0x03					COOLANT_TEMP					double              celsius             1.0              0.0
+						0x04					MAF								double              grams per second    1.0              0.0
+						0x05					FUEL_STATUS						double              type E/D/G           -               unknown
+						0x06					FUEL_PRESSURE					double              bar                 1.0              0.0
+						0x07					AIR_STATUS						double              celsius             1.0              0.0
+						0x08					RUNTIME							double              time (seconds)      1.0              0.0
+						0x09					ENGINE_LOAD						double              percent %           1.0              0.0
+						0x0A					DISTANCE_W_MIL					double              meter               1.0              0.0
+						0x0B					FUEL_TYPE						string              string              -                unknown                                                                          
+						0x0C					AMBIANT_AIR_TEMPERATURE			double              celsius             1.0              0.0                                                                  
+						0x0D					BAROMETRIC_PRESSURE				double              bar                 1.0              0.0                                                                    
+						0x0E					INTAKE_TEMPERATURE				double              celsius             1.0              0.0                                                                              
+						0x0F					OIL_TEMPERATURE					double              celsius             1.0              0.0                                                                                                   
+						0x10					ETHANOL_PERCENT					double              percent             1.0              0.0                                                                                                       
+						0x11					PIDS_A							string              no unit              -               empty                                                                                                  
+						0x12					STATUS							string              no unit              -               empty                                                                   
+						0x13					EGR_ERROR						String              no unit              -               empty
+						
+						0xFF					MESSAGE							string				no unit				-				""
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GPS		:	0x02		0x00					LATITUDE						double              DMS                 1.0              0.0
+						0x01					LONGITUDE						double              DMS                 1.0              0.0
+						0x02					ALTITUDE						double              meter               1.0              0.0
+						0x03					SATELLITES						int                 no unit             1.0              0.0
+						0x04					SPEED							double              m/s                 1.0              0.0           
+						0x05					HORIZONTAL_PRECISION			double              no unit           	1.0              1.0             
+						0x06					TIME							time                time                -                0.0                                
+						
+						0xFF					MESSAGE							string				no unit				-				""
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CAM		:	0x03		0x00					WIDTH							int					no unit				-				-
+						0x01					HEIGHT							int					no unit				-				-
+						0x02					BYTES_PER_PIXELS				int					no unit				-				-
+						0x03					IMAGE							byte[]				no unit				-				black image
+						0x04					CAPTURE_TIME					time				time				-				now
+						0x05					CAPTURE_DATE					date				date				-				today
+						0x06					TIME							time				time				-				now
+						
+						0xFF					MESSAGE							string				no unit				-				""
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#################################################################################################################################################################################
+
+
+Example (1):	Sending IMU data by a remote device with unique ID=1008
+				SendIMUData("$1008#0x02=43.89:0x04=22.7:0x03=33.5:0x00=543.9:0x01=543.7:...:...")
+			
+
+DESCRIPTION : 	Within the implementation of the SendIMUData Method, the Group ID will be set to 0x00 (for IMU) so that the
+				send will not need to provide the Group ID and that means for the send request above:
+				
+				-> Sender is the device with the unique device ID = 1008
+				IMU.X_GYROSCOPE=43.89
+				IMU.Z_GYROSCOPE=22.7
+				IMU.Y_GYROSCOPE=33.5
+				IMU.PITCH_ACCEL=543.9
+				IMU.ROLL_ACCEL=543.7
+				...
+				...
+			
+
+Example (2): 	Sending OBD2 data by a remote device with unique ID=1009
+				SendOBD2Data("$1009#0x00=43.89:0x01=22.7:0x0B=45.5:0x08=543.9:0x02=56:0x12=0:...:...")
+
+DESCRIPTION : 	Within the implementation of the SendOBD2Data Method, the Group ID will be set to 0x10 (for OBD2) so that the
+				send will not need to provide the Group ID and that means for the send request above:
+				
+				-> Sender is the device with the unique device ID = 1009
+				OBD2.SPEED=43.89
+				OBD2.RPM=22.7
+				OBD2.FUEL_TYPE=45.5
+				OBD2.RUNTIME=543.9
+				OBD2.THROTTLE_POSITION=56
+				OBD2.STATUS=0
+				...
+				...
+
+Example (3): 	Sending GPS data by a remote device with unique ID=1010
+				SendGPSData("$10010#0x00=43.89:0x04=22.7:0x02=400.5:0x07=65987:0x01=543.7:...:...")
+
+DESCRIPTION : 	Within the implementation of the SendGPSData Method, the Group ID will be set to 0x20 (for GPS) so that the
+				send will not need to provide the Group ID and that means for the send request above:
+				
+				-> Sender is the device with the unique device ID = 1010
+				GPS.LATITUDE=43.89
+				GPS.SPEED=22.7
+				GPS.ALTITUDE=400.5
+				GPS.TIME=65987
+				GPS.LONGITUDE=543.7
+				...
+				...
+			
+			
+			
