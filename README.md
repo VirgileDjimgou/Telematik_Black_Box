@@ -14,24 +14,17 @@ Falls, aus welchem Grund auch immer, kein mobiles Netzwerk verfügbar ist, fungi
 
 # Welche Daten können von der Blackbox erhoben werden?
 
-Heutzutage sind Blackboxen im Auto, Lkw und anderen Fahrzeugen sehr leistungsstark und können eine Menge Fahrzeug- und Fahrerdaten erheben. Hier ein paar Beispiele:
+Hier eine Liste der daten die die Telematik Black Box verarbeiten kann : 
 
 GPS-Ort
 Geschwindigkeit
 Kilometeranzahl
 Aufnahmen von Fahrten
-Lenk- und Ruhezeiten
 Zeit vor Ort
 Kraftstoffverbrauch
-Hartes Fahrerverhalten (mit Beschleunigungsmesser)
-Fahrzeug-Dienstprogramm
-Fahrer des Fahrzeugs (mit externer ID)
-Wenn die Blackbox an CAN, OBD oder FMS angeschlossen ist, ist es möglich, spezifischere Daten zu erhalten, wie
-
+Hartes Fahrerverhalten mit IMU (Inertial Measurment Unit)
 Fehler und Fehlercodes
 Verwendung des Tempomats
-Tür geöffnet/geschlossen
 Verwendung von Sicherheitsgurten
 Motorlast
 Motortemperatur
-Die leistungsstärkste Blackbox kann sogar mit dem digitalen Fahrtenschreiber (welche in LKW verwendet wird) verbunden werden, um Einblicke in die Fahrt- und Ruhezeiten zu erhalten und kann sogar die rechtlich verwertbaren Fahrtenschreiberdaten herunterladen, die Transportunternehmen für die Einhaltung des geltenden Rechts archivieren müssen.
