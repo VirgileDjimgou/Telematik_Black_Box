@@ -1,4 +1,8 @@
 # Telematik_Black_Box
+
+[systemübersicht](/assets/introduction_overview.png)
+
+
 Die Blackbox im Auto oder ist einer der wichtigsten Punkte der Telematik.
 Ziel dieses Projekts ist es ein elektronishes Gerät zu entwickeln, dass uns ermöglicht unterschiedliche Sensordaten eines Fahrzeugs 
 zu erfassen, und diese auf einen Remote Webserver zu übertragen. 
@@ -16,15 +20,15 @@ Falls, aus welchem Grund auch immer, kein mobiles Netzwerk verfügbar ist, fungi
 
 Hier eine Liste der daten die die Telematik Black Box verarbeiten kann : 
 
-GPS-Ort
-Geschwindigkeit
-Kilometeranzahl
-Aufnahmen von Fahrten
-Zeit vor Ort
-Kraftstoffverbrauch
-Hartes Fahrerverhalten mit IMU (Inertial Measurment Unit)
-Fehler und Fehlercodes
-Verwendung des Tempomats
-Verwendung von Sicherheitsgurten
-Motorlast
-Motortemperatur
+* GPS-Ort
+* Geschwindigkeit
+* Kilometeranzahl
+* Aufnahmen von Fahrten
+* Zeit vor Ort
+* Kraftstoffverbrauch
+* Hartes Fahrerverhalten mit IMU (Inertial Measurment Unit)
+* Fehler und Fehlercodes
+* Verwendung des Tempomats
+* Verwendung von Sicherheitsgurten
+- Motorlast
+- Motortemperatur
