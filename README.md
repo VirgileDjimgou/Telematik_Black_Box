@@ -1,4 +1,5 @@
 # Telematik_Black_Box
+![Systemubersicht](https://github.com/VirgileDjimgou/Telematik_Black_Box/assets/8148300/4c5f1095-4029-44f9-bb38-377978ec1be5)
 
 [systemübersicht](/assets/Systemubersicht.png)
 [PiFace Digital](http://www.piface.org.uk/products/piface_digital/)
