@@ -1,9 +1,7 @@
-# Telematik_Black_Box
+# Cloud Telematik_Black_Box
+![Systemubersicht](https://github.com/VirgileDjimgou/Telematik_Black_Box/assets/8148300/4c5f1095-4029-44f9-bb38-377978ec1be5)
 
-[systemübersicht](/assets/Systemubersicht.png)
-[PiFace Digital](http://www.piface.org.uk/products/piface_digital/)
-
-test
+![Alt text](Telematik_Black-Box.PNG)
 
 Die Blackbox im Auto oder ist einer der wichtigsten Punkte der Telematik.
 Ziel dieses Projekts ist es ein elektronishes Gerät zu entwickeln, dass uns ermöglicht unterschiedliche Sensordaten eines Fahrzeugs 
@@ -14,9 +12,11 @@ Von Standortdaten zur GPS-Ortung, bis hin zu möglichen Fehlercodes im internen 
 
 ## Wie funktioniert die GPS-Blackbox (Fahrzeug-Telematiken)?
 
-Die Blackbox hat zwei Hauptfunktionen: das Sammeln von Daten und die Übertragung dieser. Um Daten zu sammeln, kann das Gerät an verschiedene Quellen wie CAN-Bus, OBD-Anschluss oder native Sensoren wie Zündung, Tankanzeige, Türsensoren usw. angeschlossen werden. Interne Algorithmen in der Blackbox werten alle Daten aus und es werden vorformatierte Informationen erstellt. Anschließend werden alle Daten in Echtzeit mit der internen SIM-Karte, die ein normales mobiles Netz verwendet, übertragen. Auf einer externen Plattform (in unserem Fall die FleetGO-Plattform) werden alle Daten gesammelt und für den Endbenutzer zugänglich gemacht, wo verschiedene Berichte und Analysen zur Verfügung stehen.
+Die Blackbox hat zwei Hauptfunktionen: das Sammeln von Daten und die Übertragung dieser. Um Daten zu sammeln, kann das Gerät an verschiedene Quellen wie CAN-Bus, OBD-Anschluss oder native Sensoren wie Zündung, Tankanzeige, Türsensoren usw. angeschlossen werden. Interne Algorithmen in der Blackbox werten alle Daten aus und es werden vorformatierte Informationen erstellt. Anschließend werden alle Daten in Echtzeit mit der internen SIM-Karte, die ein normales mobiles Netz verwendet, übertragen. Auf einer externen Plattform (in unserem Fall die Azure-Cloud-Plattform) werden alle Daten gesammelt und für den Endbenutzer zugänglich gemacht, wo verschiedene Berichte und Analysen zur Verfügung stehen.
 
 Falls, aus welchem Grund auch immer, kein mobiles Netzwerk verfügbar ist, fungiert die Blackbox wie ein digitaler Fahrdatenschreiber und speichert alle Daten im internen Speicher. Sobald ein Netzwerk wieder verfügbar ist, werden die Daten übermittelt.
+
+
 
 # Welche Daten können von der Blackbox erhoben werden?
 
