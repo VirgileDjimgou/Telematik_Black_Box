@@ -1,6 +1,6 @@
 # Telematik_Black_Box
 
-[systemübersicht](/assets/introduction_overview.png)
+[systemübersicht](/assets/Systemubersicht.png)
 
 
 Die Blackbox im Auto oder ist einer der wichtigsten Punkte der Telematik.
