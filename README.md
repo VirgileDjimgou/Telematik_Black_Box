@@ -16,7 +16,8 @@ Die Blackbox hat zwei Hauptfunktionen: das Sammeln von Daten und die Übertragun
 
 Falls, aus welchem Grund auch immer, kein mobiles Netzwerk verfügbar ist, fungiert die Blackbox wie ein digitaler Fahrdatenschreiber und speichert alle Daten im internen Speicher. Sobald ein Netzwerk wieder verfügbar ist, werden die Daten übermittelt.
 
-
+# Hardware Architektur
+![Alt text](Hardware_Architektur.PNG)
 
 # Welche Daten können von der Blackbox erhoben werden?
 
@@ -34,3 +35,23 @@ Hier eine Liste der daten die die Telematik Black Box verarbeiten kann :
 * Verwendung von Sicherheitsgurten
 - Motorlast
 - Motortemperatur
+
+# Hardware Komponenten
+![Alt text](Hardware_Komponenten.PNG)
+
+# Projektzustand - Was wurde bisher erreicht? - Hardware
+![Alt text](ProjektZustand.PNG)
+
+# Projektzustand - Was wurde bisher erreicht? - Software
+![Alt text](ProJektzustand_2.PNG)
+
+# besondere Schwierigkeiten
+- Entscheidung fur geeignete und g ¨ ungstige Hardware Komponenten 
+- Enstscheidung der Technologie und Programmiersprache fur die Clientanwendungen
+- Airbag-Zustand auslesen uber das OBD2-Diagnose Gerät, da Sicherheitsrelevant und sehr herstellerabhängig
+
+# Wie geht es weiter ?
+  * Integration weiterer Sensoren z.B.: Kamera, Accelerometer, Gyroscope usw. . .
+  * Entwickung nutzliche Clientfunktionalit¨aten z.B.: Fernsteuerung, Visualisierung
+  * Durchfuhrung von Tests
+  * bessere Integration in Azure Cloud Umgebung (Update einige Cloud-Funktion mit der neue .net Core Framework)
