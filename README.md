@@ -1,10 +1,6 @@
 # Telematik_Black_Box
 ![Systemubersicht](https://github.com/VirgileDjimgou/Telematik_Black_Box/assets/8148300/4c5f1095-4029-44f9-bb38-377978ec1be5)
 
-[systemübersicht](/assets/Systemubersicht.png)
-[PiFace Digital](http://www.piface.org.uk/products/piface_digital/)
-
-
 Die Blackbox im Auto oder ist einer der wichtigsten Punkte der Telematik.
 Ziel dieses Projekts ist es ein elektronishes Gerät zu entwickeln, dass uns ermöglicht unterschiedliche Sensordaten eines Fahrzeugs 
 zu erfassen, und diese auf einen Remote Webserver zu übertragen. 
