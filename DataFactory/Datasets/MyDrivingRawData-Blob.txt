@@ -1,0 +1,134 @@
+{
+    "name": "MyDrivingRawData-Blob",
+    "properties": {
+        "structure": [
+            {
+                "name": "TripId",
+                "type": "String"
+            },
+            {
+                "name": "UserId",
+                "type": "String"
+            },
+            {
+                "name": "Name",
+                "type": "String"
+            },
+            {
+                "name": "TripPointId",
+                "type": "String"
+            },
+            {
+                "name": "Lat",
+                "type": "Double"
+            },
+            {
+                "name": "Lon",
+                "type": "Double"
+            },
+            {
+                "name": "Speed",
+                "type": "Double"
+            },
+            {
+                "name": "RecordedTimeStamp",
+                "type": "Datetime"
+            },
+            {
+                "name": "Sequence",
+                "type": "Int32"
+            },
+            {
+                "name": "EngineRPM",
+                "type": "Double"
+            },
+            {
+                "name": "ShortTermFuelBank",
+                "type": "Double"
+            },
+            {
+                "name": "LargeTermFuelBank",
+                "type": "Double"
+            },
+            {
+                "name": "ThrottlePosition",
+                "type": "Double"
+            },
+            {
+                "name": "RelativeThrottlePosition",
+                "type": "Double"
+            },
+            {
+                "name": "Runtime",
+                "type": "Int32"
+            },
+            {
+                "name": "DistancewithMIL",
+                "type": "Double"
+            },
+            {
+                "name": "EngineLoad",
+                "type": "Double"
+            },
+            {
+                "name": "MAFFlowRate",
+                "type": "Double"
+            },
+            {
+                "name": "OutsideTemperature",
+                "type": "Double"
+            },
+            {
+                "name": "EngineFuelRate",
+                "type": "Double"
+            },
+            {
+                "name": "vin",
+                "type": "String"
+            }
+        ],
+        "published": false,
+        "type": "AzureBlob",
+        "linkedServiceName": "AzureStorageLinkedService",
+        "typeProperties": {
+            "folderPath": "rawdata/tripdata/{Year}/{Month}/{Day}",
+            "format": {
+                "type": "TextFormat",
+                "rowDelimiter": "\n",
+                "columnDelimiter": ","
+            },
+            "partitionedBy": [
+                {
+                    "name": "Year",
+                    "value": {
+                        "type": "DateTime",
+                        "date": "SliceStart",
+                        "format": "yyyy"
+                    }
+                },
+                {
+                    "name": "Month",
+                    "value": {
+                        "type": "DateTime",
+                        "date": "SliceStart",
+                        "format": "MM"
+                    }
+                },
+                {
+                    "name": "Day",
+                    "value": {
+                        "type": "DateTime",
+                        "date": "SliceStart",
+                        "format": "dd"
+                    }
+                }
+            ]
+        },
+        "availability": {
+            "frequency": "Day",
+            "interval": 1
+        },
+        "external": true,
+        "policy": {}
+    }
+}
