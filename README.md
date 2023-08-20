@@ -3,7 +3,7 @@
 
 ![Alt text](Telematik_Black-Box.PNG)
 
-Die Blackbox im Auto oder ist einer der wichtigsten Punkte der Telematik.
+Die Blackbox im Auto ist einer der wichtigsten Punkte der Telematik.
 Ziel dieses Projekts ist es ein elektronishes Gerät zu entwickeln, dass uns ermöglicht unterschiedliche Sensordaten eines Fahrzeugs 
 zu erfassen, und diese auf einen Remote Webserver zu übertragen. 
 
