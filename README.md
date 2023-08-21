@@ -55,3 +55,22 @@ Hier eine Liste der daten die die Telematik Black Box verarbeiten kann :
   * Entwickung nutzliche Clientfunktionalit¨aten z.B.: Fernsteuerung, Visualisierung
   * Durchfuhrung von Tests
   * bessere Integration in Azure Cloud Umgebung (Update einige Cloud-Funktion mit der neue .net Core Framework)
+
+Who made this
+--------------
+
+| <a href="https://github.com/VirgileDjimgou"><img src="https://avatars1.githubusercontent.com/u/8148300?s=400&v=4" alt="IoEngine" align="left" height="100" width="100" /></a>
+|---
+| [VirgileDjimgou](https://github.com/VirgileDjimgou)
+
+Contribute
+----------
+
+1. Create an issue to discuss about your idea
+2. [Fork it] (https://github.com/VirgileDjimgou/Telematik_Black_Box)
+3. Create your feature branch (`git checkout -b my-new-feature`)
+4. Commit your changes (`git commit -am 'Add some feature'`)
+5. Push to the branch (`git push origin my-new-feature`)
+6. Create a new Pull Request
+7. Profit! :white_check_mark:
+
